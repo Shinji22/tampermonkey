@@ -7,6 +7,7 @@
         const passwordSecurityURLPattern = /.*\/confirm\/#strengthenPassword.*/;
         window.addEventListener('popstate', function (event) {
             if (window.location.href.match(passwordSecurityURLPattern)) {
+				console.log(window.location.href.replace(/confirm\/#strengthenPassword.*/, ''));
              document.location.replace(window.location.href.replace(/confirm\/#strengthenPassword.*/, ''));
             }
         });
